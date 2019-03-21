@@ -57,18 +57,9 @@
           <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
             <ul class="nav navbar-nav menu_nav">
               <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-              <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-              <li class="nav-item"><a class="nav-link" href="properties.html">Properties</a></li>
               <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-              <li class="nav-item submenu dropdown">
-                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                aria-expanded="false">Blog</a>
-                <ul class="dropdown-menu">
-                  <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-                  <li class="nav-item"><a class="nav-link" href="blog-single.html">Blog Details</a></li>
-                </ul>
-              </li>
               <li class="nav-item active"><a class="nav-link" href="contact.html">Contact</a></li>
+              <li><a class="button home-banner-btn" href="http://www.accommodationbermagui.com.au/accommodation/Bermagui/Apartment/405273215-Vista-Marina-4-Water-views">Book Now</a></li>
             </ul>
           </div>
 
@@ -112,6 +103,7 @@
         <script>
           function initMap() {
             var uluru = {lat: -25.363, lng: 131.044};
+        	var vistaMarina = {lat: -36.427341, lng: 150.072065};
             var grayStyles = [
               {
                 featureType: "all",
@@ -123,11 +115,14 @@
               {elementType: 'labels.text.fill', stylers: [{color: '#A3A3A3'}]}
             ];
             var map = new google.maps.Map(document.getElementById('map'), {
-              center: {lat: -31.197, lng: 150.744},
-              zoom: 9,
-              styles: grayStyles,
+            	center: {lat: -36.427341, lng: 150.072065},
+                zoom: 15,
+//               styles: defaultStyles,
               scrollwheel:  false
             });
+
+            var marker = new google.maps.Marker({position: vistaMarina, map: map});
+
           }
           
         </script>
